@@ -1,0 +1,8 @@
+#!/bin/bash
+yum update -y
+amazon-linux-extras enable nginx1
+yum clean metadata
+yum install nginx -y
+systemctl start nginx
+systemctl enable nginx
+aws s3 cp s3://sda1027-clarusway-assets/index.html /usr/share/nginx/html/index.html
