@@ -16,7 +16,7 @@ This project demonstrates the deployment of a highly available web application u
 
 ### ✅ Tasks Completed:
 
-- Created bucket: `w7ed-clarusway-assets` in region `eu-north-1`
+- Created bucket: `sda1027-clarusway-assets` in region `eu-north-1`
 - Uploaded:
   - `index.html`
   - `logo.png`, `sda.png`
@@ -25,7 +25,7 @@ This project demonstrates the deployment of a highly available web application u
 
 ### 🔗 S3 Website URL:
 
-http://w7ed-clarusway-assets.s3-website.eu-north-1.amazonaws.com/
+http://sda1027-clarusway-assets.s3-website.eu-north-1.amazonaws.com/
 
 
 ### 🧪 Validation:
@@ -51,7 +51,7 @@ yum clean metadata
 yum install nginx -y
 systemctl start nginx
 systemctl enable nginx
-aws s3 cp s3://w7ed-clarusway-assets/index.html /usr/share/nginx/html/index.html
+aws s3 cp s3://sda1027-clarusway-assets/index.html /usr/share/nginx/html/index.html
 
 ✅ ASG Setup:
 
@@ -118,7 +118,7 @@ for i in {1..5}; do curl -s http://clarusway-alb-123456789.eu-north-1.elb.amazon
     "Effect": "Allow",
     "Principal": "*",
     "Action": "s3:GetObject",
-    "Resource": "arn:aws:s3:::w7ed-clarusway-assets/*"
+    "Resource": "arn:aws:s3:::sda1027-clarusway-assets/*"
   }]
 }
 
@@ -134,5 +134,5 @@ for i in {1..5}; do curl -s http://clarusway-alb-123456789.eu-north-1.elb.amazon
 
 👨‍💻 Author
 
-w7ed
+Abdulwahed
 Clarusway DevOps Bootcamp – Week 9
